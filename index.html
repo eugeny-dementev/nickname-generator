@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <script src="http://chancejs.com/chance.min.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      const chance = new Chance();
+
+      function generate() {
+        document.getElementById('nickname').value = chance.word();
+      }
+
+      function copyToClipboard() {
+        document.getElementById('nickname').select();
+        document.execCommand("Copy");
+      }
+      
+    </script>
+    <input id="nickname" type="text">
+    
+    <button onclick="generate();">generate</button>
+    <button onclick="copyToClipboard();">copy to clipboard</button>
+  </body>
+</html>
